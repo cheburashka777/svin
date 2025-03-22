@@ -7,7 +7,7 @@ if (!$connect) {
 }
 
 try {
-    $count = mysqli_query($connect, "SELECT * FROM `svin` LIMIT 1");
+    $count = mysqli_query($connect, "SELECT * FROM `svin`");
     $count = mysqli_fetch_row($count);
 
     echo $count[0];

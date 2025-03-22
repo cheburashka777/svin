@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    margin: 0;
+    margin: 0 10px;
     font-family: 'Impact';
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
@@ -22,7 +22,7 @@ button:active {
 }
 
 img {
-    height: 100%;
+    width: 100%;
 }
 
 .wrapper {
@@ -30,9 +30,10 @@ img {
     flex-direction: column;
     align-items: center;
     height: 100%;
-    justify-content: space-around;
     opacity: 0;
     transition: ease-in .3s opacity;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .wrapper#visible {
@@ -48,13 +49,14 @@ img {
 }
 
 .svin {
-    height: 10rem;
+    max-width: 15rem;
 }
 
 .center {
     display: flex;
     align-items: center;
     gap: 30px;
+    height: 100%;
 }
 
 #number {

@@ -6,6 +6,7 @@ async function addSvin() {
 
     if (text.includes("Maximum call stack size of")) {
         alert("Возникла ошибка на сервере. Попробуйте ещё раз!");
+        location.reload();
     } else {
         let number = document.getElementById("number");
         number.innerHTML = text;
@@ -13,6 +14,7 @@ async function addSvin() {
 
     } else {
     alert("Возникла ошибка на сервере. Попробуйте ещё раз!");
+    location.reload();
     }
 }
 
@@ -24,6 +26,7 @@ async function viewSvin() {
 
     if (text.includes("Maximum call stack size of")) {
         alert("Возникла ошибка на сервере. Попробуйте ещё раз!");
+        location.reload();
     } else {
         let number = document.getElementById("number");
         number.innerHTML = text;
@@ -31,6 +34,7 @@ async function viewSvin() {
 
     } else {
     alert("Возникла ошибка на сервере. Попробуйте ещё раз!");
+    location.reload();
     }
 }
 
