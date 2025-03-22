@@ -35,3 +35,7 @@ async function viewSvin() {
 }
 
 viewSvin();
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    document.querySelector(".wrapper").setAttribute('style', 'opacity: 1;');
+  });
