@@ -57,6 +57,7 @@ img {
     align-items: center;
     gap: 30px;
     height: 100%;
+    transform: translateX(-30px);
 }
 
 #number {
