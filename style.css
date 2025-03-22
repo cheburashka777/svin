@@ -32,7 +32,7 @@ img {
     height: 100%;
     opacity: 0;
     transition: ease-in .3s opacity;
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box;
 }
 
