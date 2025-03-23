@@ -63,3 +63,10 @@ img {
 #number {
     font-size: 2em;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(27, 27, 27);
+        color: rgb(235, 235, 235);
+    }
+}
