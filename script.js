@@ -39,6 +39,7 @@ async function viewSvin() {
 }
 
 viewSvin();
+setInterval(() => viewSvin(), 1000);
 
 document.addEventListener("DOMContentLoaded", (event) => {
     document.querySelector(".wrapper").setAttribute('style', 'opacity: 1;');
