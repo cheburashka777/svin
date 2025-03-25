@@ -42,5 +42,8 @@ viewSvin();
 setInterval(() => viewSvin(), 1000);
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    document.querySelector(".wrapper").setAttribute('style', 'opacity: 1;');
-  });
+    document.querySelector(".svin").setAttribute('style', 'transform: translateX(0px);');
+    setInterval(() => {document.querySelector(".title").setAttribute('style', 'transform: translateY(0px);')}, 200);
+    setInterval(() => {document.querySelector("#number").setAttribute('style', 'transform: translateX(0px);')}, 400);
+    setInterval(() => {document.querySelector(".button").setAttribute('style', 'transform: translateY(0px);')}, 600);
+});
