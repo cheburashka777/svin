@@ -46,4 +46,9 @@ window.onload = function () {
     setInterval(() => {document.querySelector(".title").setAttribute('style', 'transform: translateY(0px);')}, 200);
     setInterval(() => {document.querySelector("#number").setAttribute('style', 'transform: translateX(0px);')}, 400);
     setInterval(() => {document.querySelector(".button").setAttribute('style', 'transform: translateY(0px);')}, 600);
+
+    document.querySelector(".svin").onclick = function () {
+        this.setAttribute('id', 'pressed');
+        this.addEventListener("animationend", function () {this.removeAttribute('id')});
+    }
 }
