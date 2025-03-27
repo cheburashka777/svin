@@ -10,6 +10,10 @@ async function addSvin() {
     } else {
         let number = document.getElementById("number");
         number.innerHTML = text;
+        if text % 1000 == 0 {
+            this.setAttribute('id', 'pressed');
+            this.addEventListener("animationend", function () {this.removeAttribute('id')});
+        }
     }
 
     } else {
