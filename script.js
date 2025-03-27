@@ -10,9 +10,9 @@ async function addSvin() {
     } else {
         let number = document.getElementById("number");
         number.innerHTML = text;
-        if text % 1000 == 0 {
-            this.setAttribute('id', 'pressed');
-            this.addEventListener("animationend", function () {this.removeAttribute('id')});
+        if (text % 100 == 0) {
+            document.querySelector(".svin").setAttribute('id', 'pressed');
+            document.querySelector(".svin").addEventListener("animationend", function () {this.removeAttribute('id')});
         }
     }
 
