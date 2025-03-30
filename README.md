@@ -1,4 +1,4 @@
-#  <img align="right" src="/svin.png" width="15%"> Всемирный Международный счётчик свиней!
+#  <img align="right" src="/svin.png" width="15%"> Всемирный Международный Счётчик Свиней!
 
 Сделан за пару часов всего из одной простой идеи.
 <img src="/screenshot.png">
