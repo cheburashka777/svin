@@ -1,0 +1,35 @@
+body {
+    background: url(/themes/minecraft/res/dirtT.png), url(/themes/minecraft/res/dirt.png);
+    color: rgb(235, 235, 235);
+    background-repeat: repeat-x, repeat;
+    background-position: 0px 0px, 0px -10px;
+    font-family: 'Minecraft';
+    text-shadow: 0px 5px 12px black;
+}
+
+.wrapper {
+    padding-top: 2%;
+}
+
+.title {
+    height: 20%;
+}
+
+.title img {
+    height: 100%;
+}
+
+.button {
+    font-family: 'Minecraft';
+    background: url(/themes/minecraft/res/button.png);
+    height: 60px;
+    width: 600px;
+    text-shadow: 0.15em 0.1em #0000005e;
+}
+
+@font-face {
+    font-family: "Minecraft"; 
+    src: url("/themes/minecraft/res/minecraft.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 

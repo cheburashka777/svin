@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/svin.png" type="image/x-icon">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/themes/minecraft/minecraft.css">
+    <link rel="shortcut icon" href="/themes/minecraft/res/pig.png" type="image/x-icon">
+    <script src="/js/script.js"></script>
     <noscript>
         <style>
             .svin {
@@ -30,10 +31,16 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="title">Всемирный Международный Счётчик Свиней</div>
+        <div class="theme-button" onclick="showThemes()">
+            <img src="/res/svin.png" width="30px"><br>
+            Скины
+        </div>
+        <div class="title">
+            <img src="/themes/minecraft/res/logo.png" alt="Всемирный Международный Счётчик Свиней">
+        </div>
         <div class="center">
             <div class="svin">
-                <img src="/svin.png" alt="Свин">
+                <img src="/themes/minecraft/res/pig.png" alt="Свин" width="100%">
             </div>
             <div id="number">многа</div>
         </div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/res/svin.png" type="image/x-icon">
+    <script src="/js/script.js"></script>
+    <noscript>
+        <style>
+            .svin {
+                transform: translateX(0vw);
+            }
+
+            #number {
+                transform: translateX(0vw);
+            }
+
+            .button {
+                transform: translateY(0vw);
+            }
+
+            .title {
+                transform: translateY(0vw);
+            }
+        </style>
+        <meta http-equiv="refresh" content="0;URL=/noscript.php" />
+    </noscript>
+    <title>Счётчик свиней!</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="theme-button" onclick="showThemes()">
+            <img src="/res/svin.png" width="30px"><br>
+            Скины
+        </div>
+        <div class="title">Всемирный Международный Счётчик Свиней</div>
+        <div class="center">
+            <div class="svin">
+                <img src="/res/svin.png" alt="Свин" width="100%">
+            </div>
+            <div id="number">многа</div>
+        </div>
+        <div class="bottom">
+            <button onclick="addSvin()" class="button">Добавить свинью!</button>
+        </div>
+    </div>
+</body>
+</html>
