@@ -236,7 +236,7 @@ html, body {
 }
 
 @font-face {
-  font-family: "Impact"; 
+  font-family: "Impact";
   src: url("/res/Impact.ttf") format("truetype"); 
   font-style: normal; 
   font-weight: normal; 

@@ -103,12 +103,15 @@ async function showThemes() {
     document.body.prepend(theme_choose);
     theme_choose.prepend(theme_box_container);
 
-    setInterval(() => {document.querySelector('.theme-choose').setAttribute('style', 'transform: translate(-50%, -50%);')}, 10);
+    setTimeout(() => {document.querySelector('.theme-choose').setAttribute('style', 'transform: translate(-50%, -50%);')}, 10);
 }
 
 function hideThemes() {
-    document.querySelector(".theme-choose-backdrop").remove();
-    document.querySelector(".theme-choose").remove();
+    document.querySelector('.theme-choose').setAttribute('style', 'transform: translate(-50%, -200%); transition-duration: 1s;')
+    setTimeout(function () {
+        document.querySelector(".theme-choose-backdrop").remove();
+        document.querySelector(".theme-choose").remove();
+    }, 80);
 }
 
 async function setTheme($name) {
