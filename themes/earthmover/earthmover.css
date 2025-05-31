@@ -1,3 +1,7 @@
+body {
+    background: url(/themes/earthmover/res/background.png) center;
+}
+
 body, .button {
     font-family: "Ultrakill", 'Arial', sans-serif;
 }
