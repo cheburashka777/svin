@@ -1,3 +1,0 @@
-<?php
-
-setcookie('theme', 'min');

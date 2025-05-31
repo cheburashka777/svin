@@ -1,0 +1,10 @@
+body, .button {
+    font-family: "Ultrakill", 'Arial', sans-serif;
+}
+
+@font-face {
+    font-family: "Ultrakill"; 
+    src: url("/themes/ultrakill/res/VHS font.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
