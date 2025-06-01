@@ -20,9 +20,9 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/svin.png" type="image/x-icon">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/res/svin.png" type="image/x-icon">
+    <script src="/js/script.js"></script>
     <style>
         .svin {
             transform: translateX(0vw);
@@ -47,9 +47,9 @@ try {
         <div class="title">Всемирный Международный Счётчик Свиней</div>
         <div class="center">
             <div class="svin">
-                <img src="/svin.png" alt="Свин">
+                <img src="/res/svin.png" alt="Свин">
             </div>
-            <div id="number"><? echo $count[0]; ?></div>
+            <div id="number"><?= $count[0]; ?></div>
         </div>
         <div class="bottom">
             <a href="/addL.php" class="button">Добавить свинью!</a>
