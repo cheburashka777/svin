@@ -32,7 +32,7 @@ try {
             transform: translateX(0vw);
         }
 
-        .button {
+        .bottom {
             transform: translateY(0vw);
         }
 
@@ -47,7 +47,7 @@ try {
         <div class="title">Всемирный Международный Счётчик Свиней</div>
         <div class="center">
             <div class="svin">
-                <img src="/res/svin.png" alt="Свин">
+                <img src="/res/svin.png" alt="Свин" width="100%">
             </div>
             <div id="number"><?= $count[0]; ?></div>
         </div>
