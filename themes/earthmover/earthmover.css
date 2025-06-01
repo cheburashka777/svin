@@ -1,5 +1,6 @@
 body {
     background: url(/themes/earthmover/res/background.png) center;
+    color: white !important;
 }
 
 body, .button {
