@@ -2,6 +2,19 @@ body, .button {
     font-family: "Ultrakill", 'Arial', sans-serif;
 }
 
+.theme-choose {
+    background: transparent;
+    border-image: url(/themes/earthmover/res/box.png) round;
+    border-image-width: 117px 117px 24px 24px;
+    border-image-slice: 117 117 24 24 fill;
+    padding: 10px 100px;
+    box-sizing: content-box;
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
+
 @font-face {
     font-family: "Ultrakill"; 
     src: url("/themes/ultrakill/res/VHS font.ttf") format("truetype"); 
