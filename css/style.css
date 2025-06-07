@@ -125,7 +125,7 @@ html, body {
     top: 50%;
     left: 50%;
     background: rgb(248, 248, 248);
-    /* border-radius: 5% / 15%; */
+    border-radius: 20px;
     transform: translate(-50%, -200%);
     padding: 10px;
     width: 500px;
