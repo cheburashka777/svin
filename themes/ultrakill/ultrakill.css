@@ -9,6 +9,7 @@ body, .button {
     border-image-slice: 117 117 24 24 fill;
     padding: 10px 100px;
     box-sizing: content-box;
+    color: white;
 }
 
 ::-webkit-scrollbar {
