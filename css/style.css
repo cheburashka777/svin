@@ -181,6 +181,27 @@ html, body {
     overflow: auto;
 }
 
+.error {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 0.8rem;
+    background-color: #e12323;
+    padding: 8px 10px;
+    z-index: 2;
+    border: 1px solid #2c2c2c;
+    border-radius: 5px;
+    color: white;
+}
+
+.error.showed {
+    animation: showError 1s ease-out;
+}
+
+.error.removed {
+    animation: removeError 1s ease-in;
+}
+
 @media (max-width: 768px) {
     .theme-choose {
         width: 80%;
@@ -232,6 +253,24 @@ html, body {
     }
     100% {
         transform: scale(1, 1);
+    }
+}
+
+@keyframes showError {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes removeError {
+    from {
+        top: 0;
+    }
+    to {
+        top: -100%;
     }
 }
 

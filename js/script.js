@@ -14,35 +14,85 @@ async function addSvin() {
         number.innerHTML = text;
         if (text % 100 == 0) krik();
     } else {
-        if (confirm("Возникла ошибка на сервере. Перезагрузить страницу?")) {
-            location.reload();
+        if (confirm("Не удалось добавить поросяток :( Попробовать ещё раз?")) {
+            addSvin();
         }
     }
 }
 
-async function viewSvin() {
+async function viewSvin(att = 0, time = 5) {
     let response = await fetch('/view.php');
 
     if (response.ok) {
         let text = await response.text();
         let number = document.getElementById("number");
         number.innerHTML = text;
+        return true;
     } else {
-        if (confirm("Возникла ошибка на сервере. Перезагрузить страницу?")) {
-            location.reload();
+        if (att >= 5) {
+            let error = document.createElement('div');
+            error.className = 'error showed';
+            error.innerHTML = `Не получилось <:( <br> Попробуйте обновить страницу или зайти позже.`;
+            document.body.prepend(error);
+
+            setTimeout(() => {
+                document.querySelector(".error").classList.add('removed');
+                    document.querySelector(".error").addEventListener("animationend", function () {
+                        this.remove();
+                    });
+            }, 10000);
+            return false;
         }
+
+        let initialTime = time;
+
+        let error = document.createElement('div');
+        error.className = 'error showed';
+        error.innerHTML = `Не удалось узнать кол-во поросяток :( <br> Пробуем ещё раз через <span id="time">${formWord(time)}</span>.`;
+        document.body.prepend(error);
+
+        let timer = setInterval(() => {
+            document.getElementById("time").innerHTML = formWord(time);
+            if (time <= 0) {
+                clearInterval(timer);
+                document.querySelector(".error").classList.add('removed');
+                document.querySelector(".error").addEventListener("animationend", function () {
+                    this.remove();
+                    viewSvin((att + 1), (initialTime + 5));
+                });
+            } else {
+                time--;
+            }
+        }, 1000);
+
+        // if (confirm("Возникла ошибка на сервере. Перезагрузить страницу?")) {
+        //     location.reload();
+        // }
     }
 }
 
-viewSvin();
-setInterval(() => viewSvin(), 1000);
+function formWord(num) {
+    if (num == 1) {
+        return "1 секунду";
+    } else if (num >= 2 && num <= 4) {
+        return `${num} секунды`;
+    } else if (num >= 5) {
+        return `${num} секунд`;
+    } else {
+        return `${num} секунд`;
+    }
+}
+
+if (viewSvin() == true) {
+    setInterval(() => viewSvin(), 1000);
+}
 
 window.onload = function () {
     document.querySelector(".svin").setAttribute('style', 'transform: translateX(0px);');
     document.querySelector(".theme-button").setAttribute('style', 'transform: translateX(-25%);');
-    setInterval(() => {document.querySelector(".title").setAttribute('style', 'transform: translateY(0px);')}, 200);
-    setInterval(() => {document.querySelector("#number").setAttribute('style', 'transform: translateX(0px);')}, 400);
-    setInterval(() => {document.querySelector(".bottom").setAttribute('style', 'transform: translateY(0px);')}, 600);
+    setTimeout(() => {document.querySelector(".title").setAttribute('style', 'transform: translateY(0px);')}, 200);
+    setTimeout(() => {document.querySelector("#number").setAttribute('style', 'transform: translateX(0px);')}, 400);
+    setTimeout(() => {document.querySelector(".bottom").setAttribute('style', 'transform: translateY(0px);')}, 600);
 
     document.querySelector(".svin").onclick = krik;
 }
