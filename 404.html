@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/res/svin sad.png" type="image/x-icon">
+    <script>
+        window.onload = function () {
+            document.querySelector(".svin").setAttribute('style', 'transform: translateX(0px);');
+            setTimeout(() => {document.querySelector(".title").setAttribute('style', 'transform: translateY(0px);')}, 200);
+            setTimeout(() => {document.querySelector(".bottom").setAttribute('style', 'transform: translateY(0px);')}, 400);
+            setTimeout(() => {
+                document.querySelector(".svin").setAttribute('id', 'pressed');
+                document.querySelector(".svin").addEventListener("animationend", function () {this.removeAttribute('id')});
+            }, 2000);
+        }
+
+        function turnBack() {
+            window.location.href = "/";
+        }
+    </script>
+    <noscript>
+        <style>
+            .svin {
+                transform: translateX(0vw);
+            }
+
+            #number {
+                transform: translateX(0vw);
+            }
+
+            .button {
+                transform: translateY(0vw);
+            }
+
+            .title {
+                transform: translateY(0vw);
+            }
+        </style>
+        <meta http-equiv="refresh" content="0;URL=/noscript.php" />
+    </noscript>
+    <title>Счётчик свиней!</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Страница не найдена!</div>
+        <div class="center">
+            <div class="svin">
+                <img src="/res/svin sad.png" alt="Свин" width="100%">
+            </div>
+        </div>
+        <div class="bottom">
+            <button onclick="turnBack()" class="button">Вернуться назад</button>
+            <!-- <footer>Шедеур сделан <a href="https://cheburashka777.github.io">Dark-Killer228</a></footer> -->
+        </div>
+    </div>
+</body>
+</html>
