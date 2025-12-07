@@ -7,12 +7,9 @@ if (!$connect) {
 }
 
 try {
-    $countNow = mysqli_query($connect, "SELECT * FROM `svin`");
-    $countNow = mysqli_fetch_row($countNow);
+    mysqli_query($connect, "UPDATE `svin` SET `kolvo` += 1;");
     
-    $countNew = mysqli_query($connect, "UPDATE `svin` SET `kolvo` = $countNow[0] + 1;");
-    
-    $countNow = mysqli_query($connect, "SELECT * FROM `svin`");
+    $count = mysqli_query($connect, "SELECT * FROM `svin`");
     $countNow = mysqli_fetch_row($countNow);
 
     echo $countNow[0];
