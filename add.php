@@ -7,15 +7,12 @@ if (!$connect) {
 }
 
 try {
-    $countNow = mysqli_query($connect, "SELECT * FROM `svin`");
-    $countNow = mysqli_fetch_row($countNow);
+    mysqli_query($connect, "UPDATE `svin` SET `kolvo` += 1;");
     
-    $countNew = mysqli_query($connect, "UPDATE `svin` SET `kolvo` = $countNow[0] + 1;");
-    
-    $countNow = mysqli_query($connect, "SELECT * FROM `svin`");
-    $countNow = mysqli_fetch_row($countNow);
+    $count = mysqli_query($connect, "SELECT * FROM `svin`");
+    $count = mysqli_fetch_row($count);
 
-    echo $countNow[0];
+    echo $count[0];
 } catch (Throwable $e) {
     header(http_response_code(500));
     echo 'Возникла ошибка на сервере. Попробуйте ещё раз!';
